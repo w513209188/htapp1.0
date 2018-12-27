@@ -58,7 +58,7 @@ public class ListViewAdapter extends BaseAdapter{
         }else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.image_type.setVisibility(View.VISIBLE);
+        viewHolder.image_type.setVisibility(View.GONE);
         try {
             GlideManager.getInstance().setRoundPhoto(viewHolder.imageView,R.drawable.course_image ,mContext , homeCourseBean.getCover()==null||homeCourseBean.getCover().equals("")?"http://ww.baid.com":homeCourseBean.getCover(), 4);
         }catch (Exception e){
